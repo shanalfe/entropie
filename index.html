@@ -1,0 +1,58 @@
+<!--
+	Projet MAHTHEMATIQUES Mars 2022
+	DUT2FA Informatique
+	Dylan GIRAULT & Shana LEFEVRE
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entropie</title>
+	<meta charset="utf-8"/>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script> 	<!--Script inclu ce qu'on a besoin pour dessiner le graph -->
+</head>
+
+<body>
+
+	<h2>Entropie</h2>
+	<p>Bienvenue sur l'application ! </p>
+
+	<!--Formulaire matière-->
+	<form method="get" action="">
+
+		<select id="logins" name ="login"></select>
+		
+		<p>
+			Choisir une ou des matières :<br/>
+			<input type="checkbox" name="ACDA" id="acda" /> <label for="acda">ACDA</label><br />
+			<input type="checkbox" name="ANG" id="ang" /> <label for="ang">ANGLAIS</label><br />
+			<input type="checkbox" name="APL" id="apl" /> <label for="apl">APL</label><br />
+			<input type="checkbox" name="ART" id="art" /> <label for="art">ART</label><br/>
+			<input type="checkbox" name="ASR" id="asr" /> <label for="asr">ASR</label><br />
+			<input type="checkbox" name="EC" id="ec" /> <label for="ec">EC</label><br />
+			<input type="checkbox" name="EGOD" id="egod" /> <label for="egod">EGOD</label><br />
+			<input type="checkbox" name="MAT" id="mat" /> <label for="mat">MATHS</label><br />
+			<input type="checkbox" name="SGBD" id="sgbd" /> <label for="sgbd">SGBD</label><br />
+			<input type="checkbox" name="SPORT" id="sport" /> <label for="sport">SPORT</label><br />
+		</p>
+
+		<input type="submit" value="Afficher le résultat">
+	 </form>
+
+
+	 <!-- Génération graphique-->
+	<canvas id="graph1"></canvas>
+
+
+</body>
+</html>
+
+<script src="donnees/logins.js"></script>
+<script src="donnees/votes.js"></script>
+<script src ="js/API.js"></script>
+<script src = "js/graph.js"></script>
+
+<script>
+		add_element_to_select();
+</script>
